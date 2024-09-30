@@ -1,12 +1,12 @@
 # Ex02 Django ORM Web Application
-## Date: 25/09/2024
+## Date: 26-09-2024
 
 ## AIM
-To develop a Django application to store and retrieve data from a Book database using Object Relational Mapping(ORM).
+To develop a Django application to store and retrieve data from a Bank database using Object Relational Mapping(ORM).
 
 ## Entity Relationship Diagram
 
-![Blank diagram (2)](https://github.com/user-attachments/assets/b2c3bcf2-c4af-43c0-8979-88e8a90708c3)
+![image](https://github.com/user-attachments/assets/d870b904-5c5f-4331-806d-41398ce9a291)
 
 
 ## DESIGN STEPS
@@ -21,35 +21,37 @@ Create a new app in Django project
 Enter the code for admin.py and models.py
 
 ### STEP 4:
-Execute Django admin and create details for 10 books
+Execute Django admin and create details for 10 customers.
 
 ## PROGRAM
-```
-models.py
-from django.db import models
-from django.contrib import admin
-
-# Create your models here.
-class Book(models.Model):
-    book_id = models.IntegerField(primary_key=True)
-    book_name = models.CharField(max_length=100)
-    Author= models.CharField(max_length=50)
-    Date= models.DateField()
-    price = models.IntegerField()
-
-class Display_book(admin.ModelAdmin):
-    list_display = ('book_id','book_name','Author','Date','price')
 
 admin.py
+```
 from django.contrib import admin
-from .models import Book,Display_book
-# Register your models here.
+from .models import Employee,EmployeeAdmin
+admin.site.register(Employee,EmployeeAdmin)
 
-admin.site.register (Book,Display_book)
+```
+models.py
+```
+from django.db import models
+from django.contrib import admin
+class Employee (models.Model):
+    eid=models.IntegerField(primary_key=True)
+    name=models.CharField(max_length=100)
+    salary=models.IntegerField()
+    age=models.IntegerField()
+    email=models.EmailField()
+ 
+class EmployeeAdmin(admin.ModelAdmin):
+    list_display=('eid','name','salary','age','email')
+
+
 ```
 
 ## OUTPUT
- ![Screenshot 2024-09-24 213955](https://github.com/user-attachments/assets/14938316-1183-4be1-af93-92d23e459f7e)
+
+![Screenshot 2024-09-26 221607](https://github.com/user-attachments/assets/fd0ed96b-635c-4cde-aa7b-d103de90b8d7)
 
 
 
