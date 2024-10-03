@@ -6,7 +6,7 @@ To develop a Django application to store and retrieve data from a Bank database 
 
 ## Entity Relationship Diagram
 
-![alt text](image.png)
+![Screenshot 2024-10-03 101142](https://github.com/user-attachments/assets/315b1265-e31b-45c7-b3a5-c5cf6a004bf0)
 
 ## DESIGN STEPS
 
@@ -50,7 +50,7 @@ class BankloanAdmin(admin.ModelAdmin):
 
 ## OUTPUT
 
-![alt text](<Screenshot 2024-09-30 153817.png>)
+![Screenshot 2024-10-03 101154](https://github.com/user-attachments/assets/41095952-a424-42e5-94ae-2ef2a4e564a1)
 
 
 ## RESULT
